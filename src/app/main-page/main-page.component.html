@@ -1,0 +1,89 @@
+<div class="blue-bg"></div>
+<div class="main-bg">
+  <div class="header">
+    <div class="menu" (click)="showMenu()">
+      <img src="../../assets/img/menu_button.svg" alt="">
+    </div>
+    <div class="translate">
+      <span class="russian" (click)="changeLang('ru')">Русский</span>
+      <span class="kazakh" (click)="changeLang('kk')">Қазақша</span>
+    </div>
+  </div>
+  <div class="title">
+    <div class="epoch animated fadeInDown">
+      <img src="../assets/img/Эра.svg">
+    </div>
+    <div class="independent animated fadeInUp">
+      <img src="../assets/img/Независимости.png">
+    </div>
+  </div>
+  <div class="cards">
+    <div *ngFor="let card of list_of_cards;let i = index" (click)="showData(card)">
+      <div class="card animated local-card" [ngClass]="{'card-big fadeInUp':i%2==0,'card-small fadeInDown':i%2==1}">
+        <div class="line-blue"></div>
+        <div class="local-card-div">
+          <div class="card-image" [ngStyle]="{'background-image':'url('+card.image_url+')'}">
+            <!--<img src={{card.image_url}} alt="">-->
+          </div>
+          <div class="card-body">
+            <div class="camera">
+              <img src="../../assets/img/photo-camera.svg" alt="">
+            </div>
+            <div class="description_div">
+              <span>{{card.date}}</span>
+              <br>
+              <span class="card-name" *ngIf="language ==1">
+                {{card.name_ru}}
+              </span>
+              <span class="card-name" *ngIf="language ==2">
+                {{card.name_kk}}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 modal-show" *ngIf="show" (click)="overlayClicked($event)">
+  <div class="modal-show-content" #modal>
+      <button type="button" class="close" (click)="closeModal()">
+        <img src="../../assets/img/plus.svg" alt="">
+      </button>
+
+      <div class="modal-div-center w-100 h-100">
+          <iframe src="../../assets/iframe/story_html5.html" class="w-100 h-100" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-menu modal-show" [hidden]="!menupanel">
+    <div class="modal-menu-div modal-show-content" [ngClass]="{'animated fadeInDown': menupanel}" #menu>
+      <div class="close_btn" (click)="showMenu()">
+        <img src="../assets/img/plus.svg" alt="">
+      </div>
+      <div class="menu-div col-md-11">
+        <div class="menu-text">
+          <span class="menu-span">{{'COMMON.MENU' | translate}}</span>
+          <span class="about-book">{{'COMMON.ABOUT' | translate}} </span>
+          <span class="contacts">{{'COMMON.CONTACTS' | translate}}</span>
+        </div>
+        <div class="book">
+          <img src="../assets/img/book.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navigation-panel container-fluid">
+    <div class="arrows col-1 left">
+      <img src="../assets/img/left-arrow.png">
+    </div>
+    <div id="line" class="line col-10">
+      <!--<span class="circle" *ngFor="let circle of list_of_cards" (click)="showData(circle)" ></span>-->
+    </div>
+    <div class="arrows col-1 right">
+      <img src="../assets/img/right-arrow.png">
+    </div>
+  </div>
+</div>

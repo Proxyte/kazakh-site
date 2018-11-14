@@ -1,0 +1,139 @@
+.slick-dots {
+  display: flex;
+  margin: 0;
+  padding: 0.9rem 0;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+body{
+  overflow:hidden;
+}
+
+.left,.right{
+  padding:0;
+}
+
+.slick-list{
+  overflow:inherit;
+  overflow-y: visible;
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots button {
+  width: 20rem;
+  border: none;
+  border-radius: 100%;
+  background-color: yellow;
+}
+
+/*.slick-dots li{*/
+  /*display:flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+/*}*/
+
+.slick-dots li button {
+  display: block;
+  /*border: 1px solid white;*/
+  background-color: white;
+  width:17px;
+  height:17px;
+  margin-top:2px;
+
+}
+
+.slick-dots li.slick-active button {
+  background-color: yellow;
+}
+
+/*.slick-dots li.slick-active button:before {*/
+  /*content:'';*/
+  /*display:block;*/
+  /*border-radius:100%;*/
+  /*border:1px solid white;*/
+  /*width:26px;*/
+  /*height:26px;*/
+  /*margin-top:-3px;*/
+  /*margin-left:-7px;*/
+/*}*/
+
+
+/*.slick-dots li.slick-active button:after{*/
+  /*content:'';*/
+  /*display:block;*/
+  /*border-radius:100%;*/
+  /*border:1px solid grey;*/
+  /*width:42px;*/
+  /*height:42px;*/
+  /*margin-top:-18px;*/
+  /*margin-left:-20px;*/
+/*}*/
+
+.slick-dots li.slick-active button:before{
+  opacity:1;
+  color:inherit
+}
+
+.slick-list{
+  /*overflow:initial;*/
+
+}
+
+@media screen and (max-width:576px){
+  .main-bg{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+  }
+
+  .blue-bg{
+    z-index:1 !important;
+  }
+
+  /*.slick-dots li.slick-active button:after{*/
+    /*width: 36px;*/
+    /*height: 36px;*/
+    /*margin-top: -17px;*/
+    /*margin-left: -16.5px;*/
+  /*}*/
+
+  /*.slick-dots li.slick-active button:before {*/
+    /*width: 26px;*/
+    /*height: 26px;*/
+    /*margin-top: -4px;*/
+    /*margin-left: -6.5px;*/
+  /*}*/
+
+
+  .slick-dots li button{
+    width:13px !important;
+    height:13px !important;
+  }
+
+  .navigation-panel{
+    padding:0
+  }
+
+  .kazakh,.russian{
+    margin:0 10px;
+    font-size:13px;
+  }
+
+  .card-big{
+    width:250px !important;
+    height:280px !important;
+  }
+
+  .card-small{
+    width:187px !important;
+    height:247px !important;
+  }
+}
+
+
