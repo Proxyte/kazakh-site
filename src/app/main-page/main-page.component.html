@@ -5,8 +5,8 @@
       <img src="../../assets/img/menu_button.svg" alt="">
     </div>
     <div class="translate">
-      <span class="russian" (click)="changeLang('ru')">Русский</span>
-      <span class="kazakh" (click)="changeLang('kk')">Қазақша</span>
+      <span class="russian" [ngClass]="{'yellow':language == 1}" (click)="changeLang('ru')">Русский</span>
+      <span class="kazakh" [ngClass]="{'yellow':language == 2}" (click)="changeLang('kk')">Қазақша</span>
     </div>
   </div>
   <div class="title">

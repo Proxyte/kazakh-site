@@ -12,6 +12,7 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit() {
     this.checkLang()
+    console.log(this.language);
   }
 
   show = false;

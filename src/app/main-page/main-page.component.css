@@ -161,6 +161,10 @@ body{
   outline:none;
 }
 
+.yellow{
+  color:yellow;
+}
+
 .line-blue{
   height:1000vh;
   border-right:1px solid #2F81F1;
