@@ -3,14 +3,16 @@ $(document).ready(function(){
   var array = document.getElementsByClassName('card');
   $('.cards').slick({
     dots: true,
-    infinite: true,
+    infinite:false,
     speed: 300,
     arrows:false,
     slidesToShow: 1,
-    initialSlide:2,
-    centerMode: true,
+    slidesToScroll: 1,
+    initialSlide:0,
+    centerMode: false,
     variableWidth: true,
-    touchMove:false
+    variableHeight: true,
+    touchMove:false,
   });
 
   $('.left').click(function(){

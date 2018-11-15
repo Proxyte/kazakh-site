@@ -84,12 +84,28 @@ body{
   margin:0 0 50px 90px;
 }
 
+.title_kk{
+  display:flex;
+  flex-direction: column;
+  margin:0 0 50px 100px;
+}
+
 .epoch img{
   padding-left:10px;
 }
 
+.epoch_kk img{
+  margin-bottom:4px;
+  padding-left:0px;
+  margin-left:3px;
+}
+
 .independent img{
   width:600px;
+}
+
+.independent_kk img{
+  width:450px;
 }
 
 #cards{
@@ -213,9 +229,10 @@ body{
   color:white;
 }
 
-.epoch,.independent{
+.epoch,.independent,.epoch_kk,.independent_kk{
   z-index:3;
 }
+
 
 .card-description{
   background-color:#212A39;
@@ -510,7 +527,7 @@ body{
     margin-top:50px;
   }
 
-  .title{
+  .title,.title_kk{
     margin-left:0;
     z-index:4;
   }
@@ -519,12 +536,15 @@ body{
     text-align:center;
   }
 
+  .epoch_kk img{
+    margin-left:4px;
+  }
 
-  .epoch img{
+  .epoch img,.epoch_kk img{
     width:140px;
   }
 
-  .independent img{
+  .independent img,.independent_kk img{
     padding-left:5px;
     width:400px;
   }
@@ -538,7 +558,7 @@ body{
 }
 
 @media screen and (max-width:576px){
-  .independent img{
+  .independent img,.independent_kk img{
     padding-left:5px;
     width:300px;
   }
@@ -567,7 +587,7 @@ body{
     margin-bottom:100px;
   }
 
-  .title{
+  .title,.title_kk{
     margin:0 0 0 10px;
   }
 

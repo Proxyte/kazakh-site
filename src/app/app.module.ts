@@ -9,6 +9,7 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import {ClearSpacePipe} from './_pipe/clear-space.pipe';
+import {SafePipe} from './_pipe/safe.pipe';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -18,7 +19,8 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     MainPageComponent,
-    ClearSpacePipe
+    ClearSpacePipe,
+    SafePipe
   ],
   imports: [
     BrowserModule,

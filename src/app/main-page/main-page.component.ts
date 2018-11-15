@@ -1,5 +1,7 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import {bypassSanitizationTrustUrl} from '@angular/core/src/sanitization/bypass';
 
 @Component({
   selector: 'app-main-page',
@@ -7,7 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-  constructor(public translate:TranslateService) { }
+  link: string;
+  constructor(public translate:TranslateService,private sanitizer:DomSanitizer) { }
   language:any;
 
   ngOnInit() {
@@ -26,6 +29,8 @@ export class MainPageComponent implements OnInit {
   selectedCard;
 
   lang = 'ru';
+
+  video : string = "https://www.youtube.com/embed/CD-E-LDc384";
 
   @ViewChild('modal') modal;
   // @ViewChild('menu') menu;
@@ -54,7 +59,8 @@ export class MainPageComponent implements OnInit {
         "– в печатных изданиях или в иных формах на материальных носителях – бумага, пленка и т. п., пользователь обязан в каждом случае указывать, что источником материалов является веб-сайт www.primeminister.kz;\n" +
         "\n" +
         "– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».",
-        "iframe_path":"../../assets/iframe/story_html5.html"
+        "iframe_path_ru":"../../assets/iframe/story_html5.html",
+        "iframe_path_kk":"../../assets/iframe/story_html5_kk.html"
     },
     {
       "image_url":"../assets/img/image_2-min.png",
@@ -79,7 +85,8 @@ export class MainPageComponent implements OnInit {
         "– в печатных изданиях или в иных формах на материальных носителях – бумага, пленка и т. п., пользователь обязан в каждом случае указывать, что источником материалов является веб-сайт www.primeminister.kz;\n" +
         "\n" +
         "– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».",
-        "iframe_path":"../../assets/iframe/story_html5.html"
+      "iframe_path_ru":"../../assets/iframe/story_html5.html",
+      "iframe_path_kk":"../../assets/iframe/story_html5_kk.html"
     },
     {
       "image_url":"../assets/img/image_1-min.png",
@@ -104,7 +111,8 @@ export class MainPageComponent implements OnInit {
         "– в печатных изданиях или в иных формах на материальных носителях – бумага, пленка и т. п., пользователь обязан в каждом случае указывать, что источником материалов является веб-сайт www.primeminister.kz;\n" +
         "\n" +
         "– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».",
-        "iframe_path":"../../assets/iframe/story_html5.html"
+      "iframe_path_ru":"../../assets/iframe/story_html5.html",
+      "iframe_path_kk":"../../assets/iframe/story_html5_kk.html"
     },
     {
       "image_url": "../assets/img/image_3-min.png",
@@ -129,7 +137,8 @@ export class MainPageComponent implements OnInit {
         "– в печатных изданиях или в иных формах на материальных носителях – бумага, пленка и т. п., пользователь обязан в каждом случае указывать, что источником материалов является веб-сайт www.primeminister.kz;\n" +
         "\n" +
         "– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».",
-        "iframe_path":"../../assets/iframe/story_html5.html"
+      "iframe_path_ru":"../../assets/iframe/story_html5.html",
+      "iframe_path_kk":"../../assets/iframe/story_html5_kk.html"
     },
     {
       "image_url":"../assets/img/image_4-min.png",
@@ -154,7 +163,8 @@ export class MainPageComponent implements OnInit {
         "– в печатных изданиях или в иных формах на материальных носителях – бумага, пленка и т. п., пользователь обязан в каждом случае указывать, что источником материалов является веб-сайт www.primeminister.kz;\n" +
         "\n" +
         "– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».",
-        "iframe_path":"../../assets/iframe/story_html5.html"
+      "iframe_path_ru":"../../assets/iframe/story_html5.html",
+      "iframe_path_kk":"../../assets/iframe/story_html5_kk.html"
 
     },
     {
@@ -180,7 +190,8 @@ export class MainPageComponent implements OnInit {
         "– в печатных изданиях или в иных формах на материальных носителях – бумага, пленка и т. п., пользователь обязан в каждом случае указывать, что источником материалов является веб-сайт www.primeminister.kz;\n" +
         "\n" +
         "– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».",
-        "iframe_path":"../../assets/iframe/story_html5.html"
+        "iframe_path_ru":"../../assets/iframe/story_html5.html",
+        "iframe_path_kk":"../../assets/iframe/story_html5_kk.html"
     }
   ];
 

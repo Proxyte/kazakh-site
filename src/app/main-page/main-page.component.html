@@ -9,12 +9,20 @@
       <span class="kazakh" [ngClass]="{'yellow':language == 2}" (click)="changeLang('kk')">Қазақша</span>
     </div>
   </div>
-  <div class="title">
+  <div class="title" *ngIf="language == 1">
     <div class="epoch animated fadeInDown">
       <img src="../assets/img/Эра.svg">
     </div>
     <div class="independent animated fadeInUp">
       <img src="../assets/img/Независимости.png">
+    </div>
+  </div>
+  <div class="title_kk" *ngIf="language == 2">
+    <div class="epoch_kk animated fadeInDown">
+      <img src="../../assets/img/kk_era.svg">
+    </div>
+    <div class="independent_kk animated fadeInUp">
+      <img src="../../assets/img/kk_independence.svg">
     </div>
   </div>
   <div class="cards">
@@ -52,7 +60,9 @@
       </button>
 
       <div class="modal-div-center w-100 h-100">
-          <iframe src="../../assets/iframe/story_html5.html" class="w-100 h-100" frameborder="0"></iframe>
+
+          <iframe *ngIf="language == 1" [src]="card.iframe_path_ru | safe" class="w-100 h-100" frameborder="0"></iframe>
+          <iframe *ngIf="language == 2" [src]="card.iframe_path_kk | safe" frameborder="0" class="w-100 h-100"></iframe>
       </div>
     </div>
   </div>
