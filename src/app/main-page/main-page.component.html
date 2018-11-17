@@ -27,7 +27,7 @@
   </div>
   <div class="cards">
     <div *ngFor="let card of list_of_cards;let i = index" (click)="showData(card)">
-      <div class="card animated local-card" [ngClass]="{'card-big fadeInUp':i%2==0,'card-small fadeInDown':i%2==1}">
+      <div class="card card-big fadeInUp animated local-card">
         <div class="line-blue"></div>
         <div class="local-card-div">
           <div class="card-image" [ngStyle]="{'background-image':'url('+card.image_url+')'}">
@@ -59,11 +59,10 @@
         <img src="../../assets/img/plus.svg" alt="">
       </button>
 
-      <div class="modal-div-center w-100 h-100">
-
-          <iframe *ngIf="language == 1" [src]="card.iframe_path_ru | safe" class="w-100 h-100" frameborder="0"></iframe>
-          <iframe *ngIf="language == 2" [src]="card.iframe_path_kk | safe" frameborder="0" class="w-100 h-100"></iframe>
-      </div>
+    <div class="modal-div-center w-100 h-100">
+      <iframe *ngIf="language == 1" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="w-100 h-100" frameborder="0"></iframe>
+      <iframe *ngIf="language == 2" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="w-100 h-100" frameborder="0"></iframe>
+    </div>
     </div>
   </div>
 
@@ -86,14 +85,14 @@
   </div>
 
   <div class="navigation-panel container-fluid">
-    <div class="arrows col-1 left">
-      <img src="../assets/img/left-arrow.png">
-    </div>
-    <div id="line" class="line col-10">
+    <!--<div class="arrows col-1 left">-->
+      <!--<img src="../assets/img/left-arrow.png">-->
+    <!--</div>-->
+    <div id="line" class="line col-11">
       <!--<span class="circle" *ngFor="let circle of list_of_cards" (click)="showData(circle)" ></span>-->
     </div>
-    <div class="arrows col-1 right">
-      <img src="../assets/img/right-arrow.png">
-    </div>
+    <!--<div class="arrows col-1 right">-->
+      <!--<img src="../assets/img/right-arrow.png">-->
+    <!--</div>-->
   </div>
 </div>

@@ -10,6 +10,13 @@ body{
   overflow:hidden;
 }
 
+@font-face {
+  font-family:Bebas Neue;
+  src:url("assets/fonts/BebasNeue-Regular.otf");
+  font-style:normal;
+  font-weight:normal;
+}
+
 .left,.right{
   padding:0;
 }
@@ -21,6 +28,13 @@ body{
 
 .slick-dots li {
   margin: 0;
+  background-color:transparent;
+  color:white;
+  height:auto;
+}
+
+li.slick-active {
+  border-top:2px solid #DFB93A;
 }
 
 .slick-dots button {
@@ -29,6 +43,11 @@ body{
   border-radius: 100%;
   background-color: yellow;
 }
+
+/**/
+
+
+/**/
 
 /*.slick-dots li{*/
   /*display:flex;*/

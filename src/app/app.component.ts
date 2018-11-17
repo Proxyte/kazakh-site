@@ -16,7 +16,7 @@ export class AppComponent {
     translate.addLangs(['ru', 'kk']);
     let lang = localStorage.getItem('lang');
     if(!lang){
-      lang = 'ru';
+      lang = 'kk';
     }
 
     localStorage.setItem('lang',lang);

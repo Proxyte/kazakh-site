@@ -1,0 +1,101 @@
+<div class="blue-bg"></div>
+<div class="main-bg">
+  <div class="main-bg-div">
+    <div class="header">
+      <div class="menu">
+        <img src="../../assets/img/menu_button_yellow.svg" alt="">
+        <a routerLink="/cards">Cardss</a>
+        <span *ngIf="language == 1" class="about-text" (click)="showMenu()">О книге</span>
+        <span *ngIf="language == 2" class="about-text" (click)="showMenu()">Кітап туралы</span>
+      </div>
+      <div class="translate">
+        <span class="russian" [ngClass]="{'yellow':language == 1}" (click)="changeLang('ru')">Русский</span>
+        <span class="kazakh" [ngClass]="{'yellow':language == 2}" (click)="changeLang('kk')">Қазақша</span>
+      </div>
+    </div>
+    <div class="content col-12 col-sm-11 col-md-11">
+      <div class="title" *ngIf="language == 1">
+        <div class="epoch animated fadeInDown">
+          <img src="../assets/img/Эра.svg">
+        </div>
+        <div class="independent animated fadeInUp">
+          <img src="../assets/img/Независимости.png">
+        </div>
+      </div>
+      <div class="title_kk" *ngIf="language == 2">
+        <div class="independent_kk animated fadeInUp">
+          <img src="../../assets/img/kk_independence.svg">
+        </div>
+        <div class="epoch_kk animated fadeInDown">
+          <img src="../../assets/img/kk_era.svg">
+        </div>
+      </div>
+
+      <div class="book-information">
+        <div class="book-citate">
+          <div class="book">
+            <img src="../../assets/img/book-2.svg" alt="">
+          </div>
+          <div class="citate">
+            <span *ngIf="language == 1">{{description_ru}}</span>
+            <span *ngIf="language == 2">{{description_kk}}</span>
+            <div class="sign">
+              <img src="../../assets/img/sign.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="period-cards" *ngIf="language == 1">
+          <div class="period" *ngFor="let period of list_of_periods_ru;let i = index">
+            <div class="period-index">
+              <span>0{{i+1}}</span>
+            </div>
+            <div class="period-text">
+              <span class="period-year">{{period.year}}</span>
+              <span class="period-description">{{period.card_text}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="period-cards" *ngIf="language == 2">
+          <div class="period" *ngFor="let period of list_of_periods_kk;let i = index">
+            <div class="period-index">
+              <span>0{{i+1}}</span>
+            </div>
+            <div class="period-text">
+              <span class="period-year">{{period.year}}</span>
+              <span class="period-description">{{period.card_text}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--<div class="title_kk" *ngIf="language == 2">-->
+  <!--<div class="independent_kk animated fadeInUp">-->
+  <!--<img src="../../assets/img/kk_independence.svg">-->
+  <!--</div>-->
+  <!--<div class="epoch_kk animated fadeInDown">-->
+  <!--<img src="../../assets/img/kk_era.svg">-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <div class="modal-menu modal-show" [hidden]="!menupanel">
+    <div class="modal-menu-div modal-show-content" [ngClass]="{'animated fadeIn': menupanel}" #menu>
+      <div class="close-btn" (click)="showMenu()">
+        <img src="../../assets/img/plus-yellow.svg" alt="">
+      </div>
+      <div class="modal-description col-10">
+        <div class="book-modal">
+          <img src="../../assets/img/book-2.svg" alt="">
+        </div>
+        <div class="modal-text">
+          <h4 *ngIf="language == 1" class="about-text-modal">О книге</h4>
+          <h4 *ngIf="language == 2" class="about-text-modal">Кітап туралы</h4>
+          <span *ngIf="language == 1">{{modal_text_ru}}</span>
+          <span *ngIf="language == 2">{{modal_text_kk}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -10,6 +10,7 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import {ClearSpacePipe} from './_pipe/clear-space.pipe';
 import {SafePipe} from './_pipe/safe.pipe';
+import { MainComponent } from './main/main.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -20,7 +21,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     MainPageComponent,
     ClearSpacePipe,
-    SafePipe
+    SafePipe,
+    MainComponent
   ],
   imports: [
     BrowserModule,
