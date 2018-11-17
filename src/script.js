@@ -8,11 +8,11 @@ $(document).ready(function(){
   var firstSlide = 0;
 
   $('.cards').slick({
-    dots: true,
+    dots: false,
     infinite:false,
     speed: 300,
     arrows:false,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide:firstSlide,
     customPaging : function(slider, i) {
@@ -36,13 +36,30 @@ $(document).ready(function(){
 
   $('.slick-dots').appendTo(".line");
 
-  var presentation = document.getElementsByClassName('slick-dots');
-  for(var i =0;i<presentation[0].children.length;i++){
-    presentation[0].children[i].classList.add('col-md-3');
-    presentation[0].children[i].classList.add('div-dots')
-  }
+
+  $('#test').click(function(){
+    console.log("function is working");
+  });
+
+  var currentIndex = 0;
+
+  var number = localStorage.getItem('slide');
+  console.log(number);
+
+  // $('.cards').slick('slickGoTo',currentIndex);
+
+  $('.goTo').click(function(){
+    currentIndex = $(this).data('distance');
+
+    $('.cards').slick('slickGoTo',currentIndex);
+    console.log($(this).data('distance'));
+  });
 });
 
-$('.slick-dots li').on('mouseover', function() {
-  $(this).parents('.fade').slick('goTo', $(this).index());
-});
+
+
+$('#test').click(function(){
+  console.log("function is working");
+})
+
+

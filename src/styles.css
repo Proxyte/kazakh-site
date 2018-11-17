@@ -1,3 +1,7 @@
+*{
+  font-family:Roboto;
+}
+
 .slick-dots {
   display: flex;
   margin: 0;
@@ -44,16 +48,24 @@ li.slick-active {
   background-color: yellow;
 }
 
-/**/
+.goTo{
+  display:flex;
+  flex-direction:column;
+  font-size:14px;
+  align-items: flex-start;
+  color:white;
+  background-color:transparent;
+  border:none;
+}
 
+.goTo span{
+  display:block;
+  text-align:start;
+}
 
-/**/
-
-/*.slick-dots li{*/
-  /*display:flex;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
-/*}*/
+.goTo span:first-child{
+  color:#DFB93A;
+}
 
 .slick-dots li button {
   display: block;

@@ -11,6 +11,7 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import {ClearSpacePipe} from './_pipe/clear-space.pipe';
 import {SafePipe} from './_pipe/safe.pipe';
 import { MainComponent } from './main/main.component';
+import {DataService} from './data.service';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +38,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     }),
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -99,7 +99,7 @@
 }
 
 .book{
-  width:420px;
+  width:65%;
 }
 
 .about-text{
@@ -132,6 +132,7 @@
 .period-cards{
   display:flex;
   flex-direction:column;
+  justify-content: center;
 }
 
 .book-citate{
@@ -214,6 +215,10 @@
     overflow:auto;
   }
 
+  /*.main-bg,.blue-bg{*/
+    /*height:auto;*/
+  /*}*/
+
   .about-text-modal{
     text-align:center;
   }
@@ -289,11 +294,11 @@
   }
 
   .book{
-    width:135px;
+    width:30%;
   }
 
   .citate{
-    width:100px;
+    width:55%;
     font-size:10px;
   }
 
