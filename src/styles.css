@@ -58,12 +58,16 @@ li.slick-active {
   border:none;
   padding:10px 0 20px 0;
   opacity:.5;
+  width:80%;
+}
+
+.goTo-div{
+  width:85%;
 }
 
 .goTo span{
   display:block;
   text-align:start;
-  width:85%;
 }
 
 .goTo:hover{

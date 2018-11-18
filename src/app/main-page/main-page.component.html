@@ -32,10 +32,10 @@
       <div class="card card-big fadeInUp animated local-card">
         <div class="line-blue"></div>
         <div class="local-card-div">
-          <div *ngIf="language == 1" class="card-image" [ngStyle]="{'background-image':'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2)),url('+card.image_url+')'}">
+          <div *ngIf="language == 1" class="card-image" [ngStyle]="{'background-image':'linear-gradient(0deg,rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)),url('+card.image_url+')'}">
             <span>{{card.name_ru}}</span>
           </div>
-          <div *ngIf="language == 2" class="card-image" [ngStyle]="{'background-image':'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2)),url('+card.image_url+')'}">
+          <div *ngIf="language == 2" class="card-image" [ngStyle]="{'background-image':'linear-gradient(0deg,rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)),url('+card.image_url+')'}">
             <span>{{card.name_kk}}</span>
           </div>
         </div>
@@ -60,41 +60,58 @@
     <div class="initialslide">{{initialSlide}}</div>
 
     <div *ngIf="language == 1" class="line col-12">
-      <div class="goTo col-3" data-distance="0" (click)="sendVal(0)">
-        <span>1991 - 1995 ж</span>
-        <span>Рождение нашего государства. Первое возрождение Казахстана </span>
+      <div class="goTo-div col-3" data-distance="0" (click)="sendVal(0)">
+        <div class="goTo" data-distance="0">
+          <span>1991 - 1995 ж</span>
+          <span>Рождение нашего государства. Первое возрождение Казахстана </span>
+        </div>
       </div>
 
-      <div class="goTo col-3" data-distance="6" (click)="sendVal(6)">
-        <span>1996 - 1999 ж</span>
-        <span>НАЧАЛО ВТОРОЙ ВАРИАНТА ВТОРОЙ ГЛОБАЛЬНОЙ ПЕЧАТИ КАЗАХСТАНА</span>
+      <div class="goTo-div col-3" data-distance="6" (click)="sendVal(6)">
+        <div class="goTo" data-distance="6" (click)="sendVal(6)">
+          <span>1996 - 1999 ж</span>
+          <span>НАЧАЛО ВТОРОЙ ВАРИАНТА ВТОРОЙ ГЛОБАЛЬНОЙ ПЕЧАТИ КАЗАХСТАНА</span>
+        </div>
       </div>
-      <div class="goTo col-3" data-distance="13" (click)="sendVal(13)">
-        <span>2000 - 2010 ж</span>
-        <span>ГИДРАВЛИЧЕСКИЙ КРЕМ. ВТОРАЯ НИЖНЯЯ ЧАСТЬ КАЗАХСТАНА</span>
+
+      <div class="goTo-div col-3" data-distance="13" (click)="sendVal(13)">
+        <div class="goTo" data-distance="13" (click)="sendVal(13)">
+          <span>2000 - 2010 ж</span>
+          <span>ГИДРАВЛИЧЕСКИЙ КРЕМ. ВТОРАЯ НИЖНЯЯ ЧАСТЬ КАЗАХСТАНА</span>
+        </div>
       </div>
-      <div class="goTo col-3" data-distance="16" (click)="sendVal(16)">
-        <span>2000 ж</span>
-        <span>Установленное состояние. ТРЕТИЙ УРОВЕНЬ КАЗАХСТАНА</span>
+      <div class="goTo-div col-3" data-distance="16" (click)="sendVal(16)">
+        <div class="goTo" data-distance="16" (click)="sendVal(16)">
+          <span>2000 ж</span>
+          <span>Установленное состояние. ТРЕТИЙ УРОВЕНЬ КАЗАХСТАНА</span>
+        </div>
       </div>
     </div>
 
     <div *ngIf="language == 2" class="line col-12">
-      <div class="goTo col-3" data-distance="0" (click)="sendVal(0)">
-        <span>1991 - 1995 ж</span>
-        <span>Мемлекетіміздің дүниеге келуі. Қазақстанның бірінші жаңғыруы</span>
+      <div class="goTo-div col-3" data-distance="0" (click)="sendVal(0)">
+        <div class="goTo" data-distance="0" (click)="sendVal(0)">
+          <span>1991 - 1995 ж</span>
+          <span>Мемлекетіміздің дүниеге келуі. Қазақстанның бірінші жаңғыруы</span>
+        </div>
       </div>
-      <div class="goTo col-3" data-distance="6" (click)="sendVal(6)">
-        <span>1996 - 1999 ж</span>
-        <span>ҰЛЫ БЕТБҰРЫС.ҚАЗАҚСТАННЫҢ ЕКІНШІ ЖАҢҒЫРУЫНЫҢ БАСТАЛУЫ</span>
+      <div class="goTo-div col-3" data-distance="6" (click)="sendVal(6)">
+        <div class="goTo" data-distance="6" (click)="sendVal(6)">
+          <span>1996 - 1999 ж</span>
+          <span>ҰЛЫ БЕТБҰРЫС.ҚАЗАҚСТАННЫҢ ЕКІНШІ ЖАҢҒЫРУЫНЫҢ БАСТАЛУЫ</span>
+        </div>
       </div>
-      <div class="goTo col-3" data-distance="13" (click)="sendVal(13)">
-        <span>2000 - 2010 ж</span>
-        <span>ҚИЯҒА ҚҰЛАШ СЕРМЕУ. ҚАЗАҚСТАННЫҢ ЕКІНШІ ЖАҢҒЫРУЫ</span>
+      <div class="goTo-div col-3" data-distance="13" (click)="sendVal(13)">
+        <div class="goTo" data-distance="13" (click)="sendVal(13)">
+          <span>2000 - 2010 ж</span>
+          <span>ҚИЯҒА ҚҰЛАШ СЕРМЕУ. ҚАЗАҚСТАННЫҢ ЕКІНШІ ЖАҢҒЫРУЫ</span>
+        </div>
       </div>
-      <div class="goTo col-3" data-distance="16" (click)="sendVal(16)">
-        <span>2000 ж</span>
-        <span>ҚАЛЫПТАСҚАН МЕМЛЕКЕТ. ҚАЗАҚСТАННЫҢ ҮШІНШІ ЖАҢҒЫРУЫ</span>
+      <div class="goTo-div col-3" data-distance="16" (click)="sendVal(16)">
+        <div class="goTo" data-distance="16" (click)="sendVal(16)">
+          <span>2000 ж</span>
+          <span>ҚАЛЫПТАСҚАН МЕМЛЕКЕТ. ҚАЗАҚСТАННЫҢ ҮШІНШІ ЖАҢҒЫРУЫ</span>
+        </div>
       </div>
     </div>
 
