@@ -127,7 +127,7 @@
   z-index:2;
 }
 
-.local-card-div:hover,.menu:hover,.social-card:hover,.kazakh:hover,.russian:hover{
+.local-card-div:hover,.menu:hover,.social-card:hover,.kazakh:hover,.russian:hover,.menu img:hover{
   cursor: pointer;
 }
 
@@ -271,7 +271,6 @@
 .navigation-panel{
   display:flex;
   justify-content: space-between;
-  margin-bottom:10px;
   align-items: center;
   z-index:3;
   padding:0;
@@ -438,6 +437,7 @@
 .menu img{
   width:20px;
 }
+
 
 .menu{
   color:#fff;
