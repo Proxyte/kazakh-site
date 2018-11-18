@@ -36,7 +36,6 @@
   display:flex;
   justify-content: space-between;
   padding:20px;
-  opacity: .6;
   z-index: 3;
 }
 
@@ -109,7 +108,7 @@
 }
 
 .about-text{
-  color:yellow;
+  color:#DFB93A;
   font-weight:900;
   font-size:13px;
   display:block;
@@ -172,7 +171,7 @@
 }
 
 .yellow{
-  color:yellow;
+  color:#DFB93A;
 }
 
 .modal-menu{
