@@ -3,7 +3,7 @@
   <div class="main-bg-div">
     <div class="header">
       <div class="menu">
-        <img src="../../assets/img/menu_button_yellow.svg" alt="">
+        <img src="../../assets/img/menu_button_yellow.svg" alt="" (click)="showMenu()" >
         <span *ngIf="language == 1" class="about-text" (click)="showMenu()">О книге</span>
         <span *ngIf="language == 2" class="about-text" (click)="showMenu()">Кітап туралы</span>
       </div>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="period-cards" *ngIf="language == 1">
-          <div class="period" *ngFor="let period of list_of_periods_ru;let i = index" (click)="goToCards(period.distance)">
+          <div class="period" *ngFor="let period of list_of_periods_ru;let i = index" (click)="goToCards(i,period.distance)">
             <div class="period-index">
               <span>0{{i+1}}</span>
             </div>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="period-cards" *ngIf="language == 2">
-          <div class="period" *ngFor="let period of list_of_periods_kk;let i = index" (click)="goToCards(period.distance)">
+          <div class="period" *ngFor="let period of list_of_periods_kk;let i = index" (click)="goToCards(i,period.distance)">
             <div class="period-index">
               <span>0{{i+1}}</span>
             </div>

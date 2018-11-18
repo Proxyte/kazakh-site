@@ -57,11 +57,13 @@ li.slick-active {
   background-color:transparent;
   border:none;
   padding:10px 0 20px 0;
+  opacity:.5;
 }
 
 .goTo span{
   display:block;
   text-align:start;
+  width:85%;
 }
 
 .goTo:hover{
@@ -85,7 +87,7 @@ li.slick-active {
 
 .about-text{
   color:yellow;
-  font-weight:bold;
+  font-weight:900;
   font-size:13px;
   display:block;
   margin-left:12px;
@@ -97,6 +99,7 @@ li.slick-active {
 
 .orange-border-top{
   border-top:2px solid orange;
+  opacity:1;
 }
 
 .slick-dots li button {

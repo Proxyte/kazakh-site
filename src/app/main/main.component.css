@@ -54,6 +54,11 @@
   cursor:pointer;
 }
 
+.period:hover .period-index,.period:hover .period-text{
+  color:#DFB93A;
+  transition:.3s;
+}
+
 .kazakh{
   margin:0 20px;
 }
@@ -67,6 +72,7 @@
 .title_kk{
   display:flex;
   flex-direction: column;
+  width:1000px;
   /*margin:0 0 50px 100px;*/
 }
 
@@ -104,7 +110,7 @@
 
 .about-text{
   color:yellow;
-  font-weight:bold;
+  font-weight:900;
   font-size:13px;
   display:block;
   margin-left:12px;
@@ -137,6 +143,7 @@
 
 .book-citate{
   display:flex;
+  width:50%;
 }
 
 .period{

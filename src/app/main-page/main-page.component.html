@@ -2,7 +2,7 @@
 <div class="main-bg">
   <div class="header">
     <div class="menu">
-      <img src="../../assets/img/menu_button_yellow.svg" alt="">
+      <img src="../../assets/img/menu_button_yellow.svg" alt="" (click)="showMenu()">
       <span *ngIf="language == 1" class="about-text" (click)="showMenu()">О книге</span>
       <span *ngIf="language == 2" class="about-text" (click)="showMenu()">Кітап туралы</span>
     </div>
@@ -38,21 +38,6 @@
           <div *ngIf="language == 2" class="card-image" [ngStyle]="{'background-image':'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2)),url('+card.image_url+')'}">
             <span>{{card.name_kk}}</span>
           </div>
-          <!--<div class="card-body">-->
-            <!--<div class="camera">-->
-              <!--<img src="../../assets/img/photo-camera.svg" alt="">-->
-            <!--</div>-->
-            <!--<div class="description_div">-->
-              <!--<span>{{card.date}}</span>-->
-              <!--<br>-->
-              <!--<span class="card-name" *ngIf="language ==1">-->
-                <!--{{card.name_ru}}-->
-              <!--</span>-->
-              <!--<span class="card-name" *ngIf="language ==2">-->
-                <!--{{card.name_kk}}-->
-              <!--</span>-->
-            <!--</div>-->
-          <!--</div>-->
         </div>
       </div>
     </div>
@@ -71,32 +56,10 @@
     </div>
   </div>
 
-  <!--<div class="modal-menu modal-show" [hidden]="!menupanel">-->
-    <!--<div class="modal-menu-div modal-show-content" [ngClass]="{'animated fadeInDown': menupanel}" #menu>-->
-      <!--<div class="close_btn" (click)="showMenu()">-->
-        <!--<img src="../assets/img/plus.svg" alt="">-->
-      <!--</div>-->
-      <!--<div class="menu-div col-md-11">-->
-        <!--<div class="menu-text">-->
-          <!--<span class="menu-span">{{'COMMON.MENU' | translate}}</span>-->
-          <!--<span class="about-book">{{'COMMON.ABOUT' | translate}} </span>-->
-          <!--<span class="contacts">{{'COMMON.CONTACTS' | translate}}</span>-->
-        <!--</div>-->
-        <!--<div class="book">-->
-          <!--<img src="../assets/img/book.svg" alt="">-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-
   <div class="navigation-panel container-fluid">
-    <!--<div class="arrows col-1 left">-->
-      <!--<img src="../assets/img/left-arrow.png">-->
-    <!--</div>-->
     <div class="initialslide">{{initialSlide}}</div>
 
     <div *ngIf="language == 1" class="line col-12">
-      <!--<span class="circle" *ngFor="let circle of list_of_cards" (click)="showData(circle)" ></span>-->
       <div class="goTo col-3" data-distance="0" (click)="sendVal(0)">
         <span>1991 - 1995 ж</span>
         <span>Рождение нашего государства. Первое возрождение Казахстана </span>
@@ -110,14 +73,13 @@
         <span>2000 - 2010 ж</span>
         <span>ГИДРАВЛИЧЕСКИЙ КРЕМ. ВТОРАЯ НИЖНЯЯ ЧАСТЬ КАЗАХСТАНА</span>
       </div>
-      <div class="goTo col-3" data-distance="16" (click)="sendVal(19)">
+      <div class="goTo col-3" data-distance="16" (click)="sendVal(16)">
         <span>2000 ж</span>
         <span>Установленное состояние. ТРЕТИЙ УРОВЕНЬ КАЗАХСТАНА</span>
       </div>
     </div>
 
     <div *ngIf="language == 2" class="line col-12">
-      <!--<span class="circle" *ngFor="let circle of list_of_cards" (click)="showData(circle)" ></span>-->
       <div class="goTo col-3" data-distance="0" (click)="sendVal(0)">
         <span>1991 - 1995 ж</span>
         <span>Мемлекетіміздің дүниеге келуі. Қазақстанның бірінші жаңғыруы</span>

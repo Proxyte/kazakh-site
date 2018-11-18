@@ -40,12 +40,20 @@ export class MainPageComponent implements OnInit {
 
         var array = document.getElementsByClassName('card');
 
+        var arrayGoTo = document.getElementsByClassName('goTo');
+
         var slide_localstorage = localStorage.getItem('slide');
 
         var card_description = document.getElementsByClassName('card-name');
 
         var firstSlide;
 
+        for(var i =0;i<arrayGoTo.length;i++){
+          var epoch_index = localStorage.getItem("index_epoch");
+          if(i == Number(epoch_index)){
+            arrayGoTo[i].classList.add("orange-border-top");
+          }
+        }
 
         $('.cards').slick({
           dots: false,
@@ -79,12 +87,9 @@ export class MainPageComponent implements OnInit {
 
         var currentIndex = 0;
 
-
-        var arrayGoTo = document.getElementsByClassName('goTo');
-
         $('.goTo').click(function () {
-          var update_localstorage = currentIndex;
           currentIndex = $(this).data('distance');
+          localStorage.setItem('slide',String(currentIndex));
           $('.cards').slick('slickGoTo', currentIndex);
         });
       });
@@ -639,7 +644,6 @@ export class MainPageComponent implements OnInit {
     }
   ];
 
-
   checkLang() {
     let lang = localStorage.getItem('lang');
     if (lang == 'ru') {
@@ -695,9 +699,9 @@ export class MainPageComponent implements OnInit {
     $('.goTo').removeClass("orange-border-top");
     for(let i=0;i<goTo.length;i++){
       let test = goTo[i].getAttribute('data-distance');
-      console.log(test);
       if(test == slide){
         goTo[i].classList.add('orange-border-top');
+        localStorage.setItem('index_epoch',String(i));
       }
     }
   }

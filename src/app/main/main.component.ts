@@ -77,8 +77,10 @@ export class MainComponent implements OnInit {
     this.checkLang();
   }
 
-  goToCards(period){
+  goToCards(index,period){
     console.log(period);
+    localStorage.setItem('index_epoch',index);
+    localStorage.setItem('slide',period);
     this.router.navigateByUrl('cards');
     this.data.showInitialSlide(period);
   }
