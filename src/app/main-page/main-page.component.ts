@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {DataService} from '../data.service';
@@ -25,7 +25,10 @@ export class MainPageComponent implements OnInit {
     "Книга характеризуется характером «казахстанской модели развития» и ее эволюцией, ее основными принципами и движущими силами. Широко распространены три волны модернизации Казахстана. В рамках первой и второй модернизации задача радикального разделения тоталитарной системы и создания рыночной экономики и присоединения к пятидесяти наиболее конкурентоспособным странам была завершена досрочно. Целью третьей модернизации является включение страны в 30 самых процветающих стран мира в новых глобальных условиях.\n" +
     "«Эпоха независимости» вызвала интерес как отечественных, так и зарубежных читателей.";
 
-  constructor(public translate: TranslateService, public sanitizer: DomSanitizer, private data: DataService) {
+  constructor(public translate: TranslateService,
+              public sanitizer: DomSanitizer,
+              private data: DataService,
+              private hostElement:ElementRef) {
     data.initialSlide.subscribe(initialSlide => {
       this.initialSlide = initialSlide;
     });
@@ -658,7 +661,10 @@ export class MainPageComponent implements OnInit {
     this.show = !this.show;
     console.log(item);
     this.modal_object = item;
-    this.iframe_path = 'iframe_path_' + localStorage.getItem('lang');
+    const iframe = this.hostElement.nativeElement.querySelector('iframe');
+    iframe.src = item.iframe_path_ru;
+
+    // this.iframe_path = 'iframe_path_' + localStorage.getItem('lang');
   }
 
   disable() {

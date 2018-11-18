@@ -120,6 +120,10 @@ li.slick-active {
   background-color: yellow;
 }
 
+.white{
+  color:#fff;
+}
+
 /*.slick-dots li.slick-active button:before {*/
   /*content:'';*/
   /*display:block;*/

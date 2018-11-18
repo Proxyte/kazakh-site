@@ -7,8 +7,8 @@
       <span *ngIf="language == 2" class="about-text" (click)="showMenu()">Кітап туралы</span>
     </div>
     <div class="translate">
-      <span class="russian" [ngClass]="{'yellow':language == 1}" (click)="changeLang('ru')">Русский</span>
-      <span class="kazakh" [ngClass]="{'yellow':language == 2}" (click)="changeLang('kk')">Қазақша</span>
+      <span class="russian" [ngClass]="{'white':language == 1}" (click)="changeLang('ru')">Русский</span>
+      <span class="kazakh" [ngClass]="{'white':language == 2}" (click)="changeLang('kk')">Қазақша</span>
     </div>
   </div>
   <div class="title" *ngIf="language == 1">
@@ -50,8 +50,8 @@
       </button>
 
     <div class="modal-div-center w-100 h-100">
-      <iframe *ngIf="language == 1" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="iframe-panel" frameborder="0"></iframe>
-      <iframe *ngIf="language == 2" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="iframe-panel" frameborder="0"></iframe>
+      <iframe *ngIf="language == 1" class="iframe-panel" frameborder="0"></iframe>
+      <iframe *ngIf="language == 2" class="iframe-panel" frameborder="0"></iframe>
     </div>
     </div>
   </div>
