@@ -65,8 +65,8 @@
       </button>
 
     <div class="modal-div-center w-100 h-100">
-      <iframe *ngIf="language == 1" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="w-100 h-100" frameborder="0"></iframe>
-      <iframe *ngIf="language == 2" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="w-100 h-100" frameborder="0"></iframe>
+      <iframe *ngIf="language == 1" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="iframe-panel" frameborder="0"></iframe>
+      <iframe *ngIf="language == 2" [src]="sanitizer.bypassSecurityTrustResourceUrl(modal_object[iframe_path])" class="iframe-panel" frameborder="0"></iframe>
     </div>
     </div>
   </div>
@@ -97,20 +97,20 @@
 
     <div *ngIf="language == 1" class="line col-12">
       <!--<span class="circle" *ngFor="let circle of list_of_cards" (click)="showData(circle)" ></span>-->
-      <div class="goTo col-3" data-distance="0">
+      <div class="goTo col-3" data-distance="0" (click)="sendVal(0)">
         <span>1991 - 1995 ж</span>
         <span>Рождение нашего государства. Первое возрождение Казахстана </span>
       </div>
 
-      <div class="goTo col-3" data-distance="6">
+      <div class="goTo col-3" data-distance="6" (click)="sendVal(6)">
         <span>1996 - 1999 ж</span>
         <span>НАЧАЛО ВТОРОЙ ВАРИАНТА ВТОРОЙ ГЛОБАЛЬНОЙ ПЕЧАТИ КАЗАХСТАНА</span>
       </div>
-      <div class="goTo col-3" data-distance="13">
+      <div class="goTo col-3" data-distance="13" (click)="sendVal(13)">
         <span>2000 - 2010 ж</span>
         <span>ГИДРАВЛИЧЕСКИЙ КРЕМ. ВТОРАЯ НИЖНЯЯ ЧАСТЬ КАЗАХСТАНА</span>
       </div>
-      <div class="goTo col-3" data-distance="19">
+      <div class="goTo col-3" data-distance="16" (click)="sendVal(19)">
         <span>2000 ж</span>
         <span>Установленное состояние. ТРЕТИЙ УРОВЕНЬ КАЗАХСТАНА</span>
       </div>
@@ -118,19 +118,19 @@
 
     <div *ngIf="language == 2" class="line col-12">
       <!--<span class="circle" *ngFor="let circle of list_of_cards" (click)="showData(circle)" ></span>-->
-      <div class="goTo col-3" data-distance="0">
+      <div class="goTo col-3" data-distance="0" (click)="sendVal(0)">
         <span>1991 - 1995 ж</span>
         <span>Мемлекетіміздің дүниеге келуі. Қазақстанның бірінші жаңғыруы</span>
       </div>
-      <div class="goTo col-3" data-distance="6">
+      <div class="goTo col-3" data-distance="6" (click)="sendVal(6)">
         <span>1996 - 1999 ж</span>
         <span>ҰЛЫ БЕТБҰРЫС.ҚАЗАҚСТАННЫҢ ЕКІНШІ ЖАҢҒЫРУЫНЫҢ БАСТАЛУЫ</span>
       </div>
-      <div class="goTo col-3" data-distance="13">
+      <div class="goTo col-3" data-distance="13" (click)="sendVal(13)">
         <span>2000 - 2010 ж</span>
         <span>ҚИЯҒА ҚҰЛАШ СЕРМЕУ. ҚАЗАҚСТАННЫҢ ЕКІНШІ ЖАҢҒЫРУЫ</span>
       </div>
-      <div class="goTo col-3" data-distance="16">
+      <div class="goTo col-3" data-distance="16" (click)="sendVal(16)">
         <span>2000 ж</span>
         <span>ҚАЛЫПТАСҚАН МЕМЛЕКЕТ. ҚАЗАҚСТАННЫҢ ҮШІНШІ ЖАҢҒЫРУЫ</span>
       </div>

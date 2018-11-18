@@ -28,7 +28,6 @@ export class MainPageComponent implements OnInit {
   constructor(public translate: TranslateService, public sanitizer: DomSanitizer, private data: DataService) {
     data.initialSlide.subscribe(initialSlide => {
       this.initialSlide = initialSlide;
-      console.log(this.initialSlide);
     });
   }
 
@@ -36,7 +35,6 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit() {
     this.checkLang();
-
     setTimeout(() => {
       $(document).ready(function () {
 
@@ -45,7 +43,6 @@ export class MainPageComponent implements OnInit {
         var slide_localstorage = localStorage.getItem('slide');
 
         var card_description = document.getElementsByClassName('card-name');
-        console.log(card_description);
 
         var firstSlide;
 
@@ -82,17 +79,13 @@ export class MainPageComponent implements OnInit {
 
         var currentIndex = 0;
 
-        var goto = document.getElementsByClassName('goTo');
-        console.log(goto);
 
-        var number = localStorage.getItem('slide');
-        console.log(number);
+        var arrayGoTo = document.getElementsByClassName('goTo');
 
         $('.goTo').click(function () {
+          var update_localstorage = currentIndex;
           currentIndex = $(this).data('distance');
-          // localStorage.setItem('slide',currentIndex);
           $('.cards').slick('slickGoTo', currentIndex);
-          console.log($(this).data('distance'));
         });
       });
 
@@ -646,6 +639,7 @@ export class MainPageComponent implements OnInit {
     }
   ];
 
+
   checkLang() {
     let lang = localStorage.getItem('lang');
     if (lang == 'ru') {
@@ -692,6 +686,19 @@ export class MainPageComponent implements OnInit {
       localStorage.setItem('lang', 'ru');
       this.translate.setDefaultLang('ru');
       location.reload();
+    }
+  }
+
+  sendVal(slide) {
+    let goTo = document.getElementsByClassName('goTo');
+    console.log(slide);
+    $('.goTo').removeClass("orange-border-top");
+    for(let i=0;i<goTo.length;i++){
+      let test = goTo[i].getAttribute('data-distance');
+      console.log(test);
+      if(test == slide){
+        goTo[i].classList.add('orange-border-top');
+      }
     }
   }
 }

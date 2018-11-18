@@ -72,6 +72,17 @@ li.slick-active {
   color:#DFB93A;
 }
 
+.iframe-panel{
+  width:100% !important;
+  height:100vh !important;
+}
+
+.close{
+  position: fixed;
+  right:20px;
+  top:20px;
+}
+
 .about-text{
   color:yellow;
   font-weight:bold;
@@ -82,6 +93,10 @@ li.slick-active {
 
 .menu{
   display:flex;
+}
+
+.orange-border-top{
+  border-top:2px solid orange;
 }
 
 .slick-dots li button {
