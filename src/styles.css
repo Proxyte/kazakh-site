@@ -56,6 +56,7 @@ li.slick-active {
   color:white;
   background-color:transparent;
   border:none;
+  padding:10px 0 20px 0;
 }
 
 .goTo span{
@@ -63,8 +64,24 @@ li.slick-active {
   text-align:start;
 }
 
+.goTo:hover{
+  cursor:pointer;
+}
+
 .goTo span:first-child{
   color:#DFB93A;
+}
+
+.about-text{
+  color:yellow;
+  font-weight:bold;
+  font-size:13px;
+  display:block;
+  margin-left:12px;
+}
+
+.menu{
+  display:flex;
 }
 
 .slick-dots li button {

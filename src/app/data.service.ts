@@ -12,5 +12,6 @@ export class DataService {
 
   showInitialSlide(initialSlide){
     this.initialSlide.next(initialSlide);
+    localStorage.setItem('slide',initialSlide);
   }
 }
