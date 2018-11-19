@@ -13,8 +13,7 @@ declare var $: any;
 })
 export class MainPageComponent implements OnInit {
   link: string;
-  iframe_path: string;
-
+  iframe_src;
   initialSlide:any;
 
   modal_text_kk = "Қазақстан Республикасының Президенті Нұрсұлтан Назарбаевтың «Тәуелсіздік дәуірі» атты бұл кітабы тарихи публицистика жанрында жазылған, ол еліміздің жаңа тарихы мен оның ертеңіне деген автордың көзқарасын танытады. Егемен мемлекет- тің негізі қаланған күннен бастап оның қалыптасу кезеңдерінің ерекшеліктері мен 26 жылдық тәуелсіздік дәуіріндегі ішкі және сыртқы сын-қатерлерді еңсеруге байла- нысты қабылданған шешімдердің мән-мазмұны мен тетіктері егжей-тегжейлі баянда- лады.\n" +
@@ -148,7 +147,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_2-min.png',
@@ -174,7 +173,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -200,7 +199,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_3-min.png',
@@ -226,7 +225,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_4-min.png',
@@ -252,7 +251,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
 
     },
     {
@@ -279,7 +278,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -305,7 +304,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -331,7 +330,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -357,7 +356,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -383,7 +382,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -409,7 +408,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -435,7 +434,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -461,7 +460,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -487,7 +486,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -513,7 +512,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -539,7 +538,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -565,7 +564,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -591,7 +590,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -617,7 +616,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     },
     {
       'image_url': '../assets/img/image_1-min.png',
@@ -643,7 +642,7 @@ export class MainPageComponent implements OnInit {
         '\n' +
         '– в Интернете или иных формах использования в электронном виде, пользователь в каждом случае использования обязан размещать гиперссылку на главную страницу веб-сайта Премьер-Министра РК «www.primeminister.kz».',
       'iframe_path_ru': '../../assets/iframe/story_html5.html',
-      'iframe_path_kk': '../../assets/iframe/story_html5.html'
+      'iframe_path_kk': '../../assets/iframe/story.html'
     }
   ];
 
@@ -659,12 +658,12 @@ export class MainPageComponent implements OnInit {
 
   showData(item) {
     this.show = !this.show;
-    console.log(item);
+    console.log('this function is working');
     this.modal_object = item;
-    const iframe = this.hostElement.nativeElement.querySelector('iframe');
-    iframe.src = item.iframe_path_ru;
-
-    // this.iframe_path = 'iframe_path_' + localStorage.getItem('lang');
+    const iframe_path =  this.modal_object['iframe_path_'+localStorage.getItem('lang')];
+    if(iframe_path){
+      this.iframe_src = this.sanitizer.bypassSecurityTrustResourceUrl(iframe_path);
+    }
   }
 
   disable() {

@@ -1,66 +1,43 @@
-$(document).ready(function(){
-})
+// setTimeout(()=>{
+//   $(document).ready(function () {
 //
-//   var array = document.getElementsByClassName('card');
+//     var array = document.getElementsByClassName('card');
 //
-//   var card_description = document.getElementsByClassName('card-name');
-//   console.log(card_description);
+//     var arrayGoTo = document.getElementsByClassName('goTo');
 //
-//   var firstSlide = 0;
+//     var slide_localstorage = localStorage.getItem('slide');
 //
-//   $('.cards').slick({
-//     dots: false,
-//     infinite:false,
-//     speed: 300,
-//     arrows:false,
-//     slidesToShow: 4,
-//     slidesToScroll: 1,
-//     initialSlide:firstSlide,
-//     customPaging : function(slider, i) {
-//       var thumb = $(slider.$slides[i]).data();
-//       console.log(thumb);
-//       return '<a>'+card_description[i].innerText+'</a>';
-//     },
-//     centerMode: false,
-//     variableWidth: true,
-//     variableHeight: true,
-//     touchMove:false,
+//     var card_description = document.getElementsByClassName('card-name');
+//
+//     var firstSlide;
+//
+//     for (var i = 0; i < arrayGoTo.length; i++) {
+//       var epoch_index = localStorage.getItem('index_epoch');
+//       if (i == Number(epoch_index)) {
+//         arrayGoTo[i].classList.add('orange-border-top');
+//       }
+//     }
+//
+//     $('.cards').slick({
+//       dots: false,
+//       infinite: false,
+//       speed: 300,
+//       arrows: false,
+//       slidesToShow: 4,
+//       slidesToScroll: 1,
+//       initialSlide: slide_localstorage,
+//       centerMode: false,
+//       variableWidth: true,
+//       variableHeight: true,
+//       touchMove: false,
+//     });
+//
+//     var currentIndex = 0;
+//
+//     $('.goTo').click(function () {
+//       currentIndex = $(this).data('distance');
+//       localStorage.setItem('slide', String(currentIndex));
+//       $('.cards').slick('slickGoTo', currentIndex);
+//     });
 //   });
-//
-//   $('.left').click(function(){
-//     $('.cards').slick('slickPrev');
-//   })
-//
-//   $('.right').click(function(){
-//     $('.cards').slick('slickNext');
-//   });
-//
-//   $('.slick-dots').appendTo(".line");
-//
-//
-//   $('#test').click(function(){
-//     console.log("function is working");
-//   });
-//
-//   var currentIndex = 0;
-//
-//   var number = localStorage.getItem('slide');
-//   console.log(number);
-//
-//   // $('.cards').slick('slickGoTo',currentIndex);
-//
-//   $('.goTo').click(function(){
-//     currentIndex = $(this).data('distance');
-//
-//     $('.cards').slick('slickGoTo',currentIndex);
-//     console.log($(this).data('distance'));
-//   });
-// });
-//
-//
-//
-// $('#test').click(function(){
-//   console.log("function is working");
-// })
-//
-//
+// },0);

@@ -27,6 +27,7 @@
             ],
             "scripts": [
               "src/bootstrap.min.js",
+              "src/assets/js/slick.min.js",
               "src/script.js"
             ]
           },
