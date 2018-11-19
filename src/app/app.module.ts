@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HashLocationStrategy,LocationStrategy} from '@angular/common';
 
 import * as $ from "jquery";
 
@@ -14,6 +15,7 @@ import {ClearSpacePipe} from './_pipe/clear-space.pipe';
 import {SafePipe} from './_pipe/safe.pipe';
 import { MainComponent } from './main/main.component';
 import {DataService} from './data.service';
+import {RouterModule} from '@angular/router';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -40,7 +42,16 @@ export function createTranslateLoader(http: HttpClient) {
       }
     }),
   ],
-  providers: [DataService],
+  providers: [
+    [
+      {
+        provide:LocationStrategy,
+        useClass:HashLocationStrategy
+      }
+    ],
+    DataService,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

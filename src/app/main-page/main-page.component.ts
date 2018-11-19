@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {DataService} from '../data.service';
+import {Router} from '@angular/router';
 
 declare var jquery: any;
 declare var $: any;
@@ -27,7 +28,8 @@ export class MainPageComponent implements OnInit {
   constructor(public translate: TranslateService,
               public sanitizer: DomSanitizer,
               private data: DataService,
-              private hostElement:ElementRef) {
+              private hostElement:ElementRef,
+              private router:Router) {
     data.initialSlide.subscribe(initialSlide => {
       this.initialSlide = initialSlide;
     });
