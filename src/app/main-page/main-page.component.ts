@@ -41,9 +41,7 @@ export class MainPageComponent implements OnInit {
     this.checkLang();
     setTimeout(() => {
       $(document).ready(function () {
-
-
-        var array = document.getElementsByClassName('card');
+        var array_of_cards = document.getElementsByClassName('card');
 
         var arrayGoTo = document.getElementsByClassName('goTo');
 
@@ -60,6 +58,13 @@ export class MainPageComponent implements OnInit {
           }
         }
 
+        $('.goTo').each(function(){
+          if(localStorage.getItem('currentSlide') == $(this).data('distance')){
+            $('.goTo').removeClass("orange-border-top");
+            $(this).addClass('orange-border-top');
+          }
+        });
+
         $('.cards').slick({
           dots: false,
           infinite: false,
@@ -74,21 +79,45 @@ export class MainPageComponent implements OnInit {
           touchMove: false,
         }, 0);
 
+        var currentSlide = Number(localStorage.getItem('currentSlide'));
+
+
 
         $('.arrow-left').on('click', function(){
           $('.cards').slick('slickPrev');
+
+          if(currentSlide== 0){
+            currentSlide = 0;
+          }
+          else{
+            currentSlide = currentSlide - 1;
+          }
+          localStorage.setItem('currentSlide',String(currentSlide));
+          $('.goTo').each(function(){
+            if(localStorage.getItem('currentSlide') == $(this).data('distance'){
+              $('.goTo').removeClass("orange-border-top");
+              $(this).addClass('orange-border-top');
+            }
+          });
         });
 
         $('.arrow-right').on('click', function(){
           $('.cards').slick('slickNext');
+          currentSlide = currentSlide + 1;
+          if(currentSlide > array_of_cards.length){
+            currentSlide = array_of_cards.length;
+          }
+          localStorage.setItem('currentSlide',String(currentSlide));
+          $('.goTo').each(function(){
+            if(localStorage.getItem('currentSlide') == $(this).data('distance')){
+              $('.goTo').removeClass("orange-border-top");
+              $(this).addClass('orange-border-top');
+            }
+          });
         });
 
-        $('.slick-dots').appendTo('.line');
-
-
-
         var currentIndex = localStorage.getItem('slide');
-        $('.cards').slick('slickGoTo',currentIndex);
+        $('.cards').slick('slickGoTo',currentSlide);
 
         $('.goTo').click(function () {
           currentIndex = $(this).data('distance');
