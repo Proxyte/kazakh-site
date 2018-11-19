@@ -104,6 +104,7 @@
 
 .book-information{
   display:flex;
+  margin-top:40px;
 }
 
 .book{
@@ -151,7 +152,7 @@
 .period{
   display:flex;
   color:#fff;
-  margin-bottom:40px;
+  margin-bottom:50px;
   justify-content: flex-end;
 }
 
@@ -245,6 +246,7 @@
 
   .book-information{
     flex-direction:column-reverse;
+    margin-top:0;
   }
 
   .book-citate{
@@ -267,7 +269,11 @@
   }
 
   .period-cards{
-    margin-top:10px;
+    margin-top:25px;
+  }
+
+  .title_kk{
+    margin-left:0;
   }
 }
 

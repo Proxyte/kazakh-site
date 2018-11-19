@@ -120,6 +120,28 @@
 
 .cards {
   z-index: 2;
+  position: relative;
+}
+
+.left{
+  text-align:start;
+  left:0;
+  top: 0;
+  bottom:0;
+}
+
+.right{
+  text-align:end;
+  right:0;
+  top: 0;
+  bottom:0;
+}
+
+.left,.right{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index:3;
 }
 
 .modal-div-center{
@@ -168,7 +190,7 @@
 }
 
 .card-big{
-  width:230px;
+  width:270px;
   height:222px;
 }
 
@@ -237,7 +259,7 @@
 }
 
 .card-big .local-card-div .card-image{
-  height:202px;
+  height:260px;
 }
 
 .card-small .local-card-div .card-image{
@@ -288,22 +310,17 @@
   border:0.07rem solid grey;
 }
 
+.arrows{
+  padding:0 10px;
+}
+
 .arrows img{
-  width:25px;
+  width:35px;
 }
 
-.left{
-  text-align:start;
-  z-index:2;
-}
-
-.right{
-  text-align:end;
-  z-index:2;
-}
 
 .left:hover,.right:hover{
-  cursor:pointer
+  cursor:pointer;
 }
 
 .circle{

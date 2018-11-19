@@ -73,14 +73,14 @@ export class MainPageComponent implements OnInit {
           touchMove: false,
         }, 0);
 
-
-        $('.left').click(function () {
+        $(document).on('click','.left', function(){
           $('.cards').slick('slickPrev');
         });
 
-        $('.right').click(function () {
+        $(document).on('click','.right', function(){
           $('.cards').slick('slickNext');
         });
+
 
         $('.slick-dots').appendTo('.line');
 
@@ -101,7 +101,6 @@ export class MainPageComponent implements OnInit {
       $('#test').click(function () {
         console.log('function is working');
       });
-
 
     });
   }
@@ -702,7 +701,6 @@ export class MainPageComponent implements OnInit {
 
   sendVal(slide) {
     let goTo = document.getElementsByClassName('goTo');
-    console.log(slide);
     $('.goTo').removeClass("orange-border-top");
     for(let i=0;i<goTo.length;i++){
       let test = goTo[i].getAttribute('data-distance');
