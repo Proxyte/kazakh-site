@@ -42,6 +42,7 @@ export class MainPageComponent implements OnInit {
     setTimeout(() => {
       $(document).ready(function () {
 
+
         var array = document.getElementsByClassName('card');
 
         var arrayGoTo = document.getElementsByClassName('goTo');
@@ -64,7 +65,7 @@ export class MainPageComponent implements OnInit {
           infinite: false,
           speed: 300,
           arrows: false,
-          slidesToShow: 4,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: slide_localstorage,
           centerMode: false,
@@ -73,23 +74,21 @@ export class MainPageComponent implements OnInit {
           touchMove: false,
         }, 0);
 
-        $(document).on('click','.left', function(){
+
+        $('.arrow-left').on('click', function(){
           $('.cards').slick('slickPrev');
         });
 
-        $(document).on('click','.right', function(){
+        $('.arrow-right').on('click', function(){
           $('.cards').slick('slickNext');
         });
-
 
         $('.slick-dots').appendTo('.line');
 
 
-        $('#test').click(function () {
-          console.log('function is working');
-        });
 
-        var currentIndex = 0;
+        var currentIndex = localStorage.getItem('slide');
+        $('.cards').slick('slickGoTo',currentIndex);
 
         $('.goTo').click(function () {
           currentIndex = $(this).data('distance');
@@ -97,12 +96,8 @@ export class MainPageComponent implements OnInit {
           $('.cards').slick('slickGoTo', currentIndex);
         });
       });
-
-      $('#test').click(function () {
-        console.log('function is working');
-      });
-
     });
+
   }
 
   show = false;
