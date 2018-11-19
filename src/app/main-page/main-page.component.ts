@@ -94,7 +94,7 @@ export class MainPageComponent implements OnInit {
           }
           localStorage.setItem('currentSlide',String(currentSlide));
           $('.goTo').each(function(){
-            if(localStorage.getItem('currentSlide') == $(this).data('distance'){
+            if(localStorage.getItem('currentSlide') == $(this).data('distance')){
               $('.goTo').removeClass("orange-border-top");
               $(this).addClass('orange-border-top');
             }
