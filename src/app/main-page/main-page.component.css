@@ -314,12 +314,13 @@
   padding:0 10px;
 }
 
+
 .arrows img{
   width:35px;
 }
 
 
-.left:hover,.right:hover{
+.arrow-left:hover,.arrow-right:hover{
   cursor:pointer;
 }
 
